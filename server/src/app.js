@@ -1,6 +1,7 @@
 import express from 'express';
 import cors from 'cors';
 import cookieParser from 'cookie-parser';
+import booksRoutes from './routes/books.routes.js';
 
 const app = express();
 
@@ -25,26 +26,6 @@ app.use(express.urlencoded({ extended: true, limit: "16kb" }));
 app.use(cookieParser());
 
 // Routes
-app.get("/books", (req, res) => {
-    const books = [
-        {
-            id: '1152424194',
-            name: "Harry Potter and the Philosopher's Stone",
-            auther: 'J.K. Rowling',
-            price: 499,
-            pages: 223,
-            availability: 'In Stock'
-        },
-        {
-            id: '1152424195',
-            name: "The Hobbit",
-            auther: 'J.R.R. Tolkien',
-            price: 599,
-            pages: 310,
-            availability: 'In Stock'
-        }
-    ];
-    res.status(200).json(books);
-})
+app.use('/api/v1', booksRoutes);
 
 export default app;

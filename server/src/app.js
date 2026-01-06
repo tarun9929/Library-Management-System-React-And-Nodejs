@@ -1,8 +1,10 @@
 import express from 'express';
 import cors from 'cors';
+import cookieParser from 'cookie-parser';
 
 const app = express();
 
+// Cors Configuration
 const whiteList = ['https://musical-space-chainsaw-745gggp9rvrhrqg7-5173.app.github.dev'];
 
 app.use(cors({
@@ -17,6 +19,12 @@ app.use(cors({
     allowedHeaders: ['POST', 'PATCH', 'DELETE', 'GET', 'OPTIONS']
 }))
 
+// Express Middlewares
+app.use(express.json({ limit: "16kb" }));
+app.use(express.urlencoded({ extended: true, limit: "16kb" }));
+app.use(cookieParser());
+
+// Routes
 app.get("/books", (req, res) => {
     const books = [
         {

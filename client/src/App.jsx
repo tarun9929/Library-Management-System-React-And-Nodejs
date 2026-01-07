@@ -35,13 +35,13 @@ function App() {
             <div>
               <button className='border flex gap-2 items-center text-sm px-2 py-1 rounded-md cursor-pointer bg-primary text-white font-bold'>
                 <IoMdCloudDownload />
-                <h2>Recent Books</h2>
+                <h2>Downloads</h2>
               </button>
             </div>
             <div>
               <button className='border flex gap-2 items-center text-sm px-2 py-1 rounded-md cursor-pointer bg-primary text-white font-bold'>
                 <FaHistory />
-                <h2>Downloads</h2>
+                <h2>Recent Books</h2>
               </button>
             </div>
           </div>

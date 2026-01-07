@@ -7,3 +7,4 @@ export const SECRET_ACCESS_TOKEN = process.env.SECRET_ACCESS_TOKEN;
 export const SECRET_ACCESS_EXPIRATION = process.env.SECRET_ACCESS_EXPIRATION;
 export const SECRET_REFRESH_TOKEN = process.env.SECRET_REFRESH_TOKEN;
 export const SECRET_REFRESH_EXPIRATION = process.env.SECRET_REFRESH_EXPIRATION;
+export const MONGODB_URI = process.env.MONGODB_URI;

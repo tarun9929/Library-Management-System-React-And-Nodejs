@@ -11,7 +11,7 @@ function App() {
 
   useEffect(() => {
     (async () => {
-      const response = await axios.get('https://musical-space-chainsaw-745gggp9rvrhrqg7-3000.app.github.dev/books', { withCredentials: true });
+      const response = await axios.get('https://musical-space-chainsaw-745gggp9rvrhrqg7-3000.app.github.dev/api/v1/books', { withCredentials: true });
       setBooks(response.data);
     })();
   })
